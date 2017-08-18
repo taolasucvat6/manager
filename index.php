@@ -5,7 +5,7 @@
             die("Couldn't initialize a cURL handle"); 
         }
         // Set the file URL to fetch through cURL
-        curl_setopt($curl, CURLOPT_URL, "http://offer.ebay.com/ws/eBayISAPI.dll?ViewBidsLogin&item=132121376526");
+        curl_setopt($curl, CURLOPT_URL, "http://offer.ebay.com/ws/eBayISAPI.dll?ViewBidsLogin&item=".$_GET["id"]);
         // Set a different user agent string (Googlebot)
         curl_setopt($curl, CURLOPT_USERAGENT, 'Googlebot/2.1 (+http://www.google.com/bot.html)'); 
         // Follow redirects, if any
